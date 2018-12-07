@@ -1,7 +1,3 @@
-#Calentar string->string
-#def: calentar el objeto mencionado
-#ej: calentar("cafe")->"cafe caliente"
-
 Calentar <- function(x){
   if(x=="cafe"){
     return("cafe caliente")
@@ -11,10 +7,6 @@ Calentar <- function(x){
     return(paste("No sé que hacer con ",x))
   }
 }
-
-#Preparar string->string
-#def: preparar algo, con los materiales mencionados
-#ej: Preparar("harina","huevos) -> "masa de panqueques"
 
 Preparar <- function(x,y){
   if(x=="naranjas cortadas"){
@@ -29,9 +21,7 @@ Preparar <- function(x,y){
     return("faltan elementos")  
   }
 }
-#Rellenar string->string
-#def: rellenar lo mencionado con manjar.
-#ej: Rellenar("panqueques")->"panqueques con manjar"
+
 Rellenar <- function(x){
   if(x=="panqueques"){
     return("panqueques con manjar")
@@ -39,9 +29,7 @@ Rellenar <- function(x){
     return(paste("No sé que hacer con ",x)) 
   }
 }
-#Moler string->string
-#def: moler lo mencionado
-#ej: Moler("palta cortada")->"palta molida"
+
 Moler <- function(x){
   if(x=="palta cortada"){
     return("palta molida")
@@ -49,9 +37,7 @@ Moler <- function(x){
     return(paste("No sé que hacer con ",x))
   }
 }
-#Cortar string->string
-#def: cortar el objeto mencionado
-#ej: Cortar("pan")->"pan cortado"
+
 Cortar <- function(x){
   if(x=="pan"){
     return("pan cortado")
@@ -63,18 +49,11 @@ Cortar <- function(x){
     return(paste("No sé que hacer con ",x))
   }
 }
-#CalentarSarten sprint->sprint
-#def: función para solo calentar la sartén
-#ej: CalentarSarten()->"sartén caliente"
 
 CalentarSarten <- function(){
   return("sartén caliente")
 }
-#Servir sprint->sprint
-#def: función para servir todo el desayuno preparado.
-#ej: Servir("pan tostado con palta","panqueques con manjar",
-#"jugo de naranjas","cafe caliente")->"mmmm...niami...el desayuno está
-# maravilloso"
+
 Servir <- function(x,y,z,j){
   if((x=="pan tostado con palta" && y=="panqueques con manjar" && z=="jugo de naranjas" && j=="cafe caliente")){
     return("mmmmm... niami... el desayuno está maravilloso")
