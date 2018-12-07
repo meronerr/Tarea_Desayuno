@@ -82,7 +82,7 @@ Servir <- function(x,y,z,j){
     return("iiiuuuu... esto no está listo")
   }
 }
-Lista de acciones
+#Lista de acciones
 Cortar("pan")
 Cortar("palta")
 Cortar("naranjas")
