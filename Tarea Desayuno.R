@@ -62,16 +62,22 @@ Servir <- function(x,y,z,j){
   }
 }
 #Lista de acciones
-Cortar("pan")
+#Cortar
+Cortar("pan") 
 Cortar("palta")
 Cortar("naranjas")
+#Calentar
 Calentar("cafe")
-Calentar("pan cortado")
-Moler("palta cortada")
-Preparar("naranjas cortadas")
+Calentar(Cortar("pan"))
+#Moler
+Moler(Cortar("palta"))
+#Preparar
+Preparar(Cortar("naranjas"))
 Preparar("harina","huevos")
 CalentarSarten()
-Preparar("masa de panqueques","sartén caliente")
-Preparar("pan tostado","palta molida")
-Rellenar("panqueques")
-Servir("pan tostado con palta","panqueques con manjar","jugo de naranjas","cafe caliente")
+Preparar((Preparar("harina","huevos")),CalentarSarten())
+Preparar(Calentar(Cortar("pan")),Moler(Cortar("palta")))
+#Rellenar
+Rellenar(Preparar((Preparar("harina","huevos")),CalentarSarten()))
+#Servir
+Servir(Preparar(Calentar(Cortar("pan")),Moler(Cortar("palta"))),Rellenar(Preparar((Preparar("harina","huevos")),CalentarSarten())),Preparar(Cortar("naranjas")),Calentar("cafe"))
